@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherWise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+      <h1>WEATHER APP</h1>
+
+      <div class="tab-container">
+        <p class="tab" data-userWeather>Your Weather</p>
+        <p class="tab" data-searchWeather>Search Weather</p>
+      </div>
+
+
+      <div class="weather-container">
+        <!-- grant Location container -->
+        <div class=" sub-container grant-location-container">
+            <img src="./assets/location.png" width="80" height="80" loading="lazy">
+            <p>Grant Location Access</p>
+            <p>Allow Access To get weather Information</p>
+            <button class="btn" data-grantAccess>Grant Access</button>
+        </div>
+
+        <!-- Search form -->
+
+        <form class="form-container" data-searchForm>
+            <input placeholder="Search for City..." data-searchInput>
+            <button class="btn" type="submit">
+                <img src="./assets/search.png" width="20" height="20" loading="lazy">
+            </button>
+        </form>
+
+        <!-- loading Screen Container -->
+        <div class="sub-container loading-container">
+            <img src="./assets/loading.gif" width="150" height="150">
+            <p>Loading..</p>
+        </div>
+
+
+        <!-- show weather information  -->
+        <div class="sub-container user-info-container">
+
+            <!-- city name and flag -->
+            <div class="name">
+                <p data-cityName></p>
+                <img data-countryIcon>
+            </div> 
+
+            <!-- weather desc -->
+            <p data-weatherDesc></p>
+
+            <!-- weatherIcon -->
+            <img data-weatherIcon>
+
+              <!-- tempreture -->
+            <p data-temp></p>
+        
+
+            <!-- 3 cards -parameters -->
+            <div class="parameter-conatiner">
+                <!-- card 1 -->
+                <div class="parameter">
+                    <img src="./assets/wind.png" >
+                    <p>WindSpeed</p>
+                    <p data-windSpeed></p>
+                </div>
+
+                <div class="parameter">
+                    <img src="./assets/humidity.png" >
+                    <p>Humidity</p>
+                    <p data-humidity></p>
+                </div>
+
+                <div class="parameter">
+                    <img src="./assets/cloud.png" >
+                    <p>Clouds</p>
+                    <p data-cloudiness></p>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
